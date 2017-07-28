@@ -1,0 +1,143 @@
+<!-- =============================================================
+
+                    Quiz application use OpenTDB
+
+ ============================================================= -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Quiz World</title>
+        <meta charset="utf-8">
+        <!-- TELLS MOBILE PHONES NOT TO LIE ABOUT THEIR TRUE WIDTH -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+        <link rel="shortcut icon" href="img/favicon2.png" type="image/x-icon">
+        <link rel="icon" href="img/favicon2.png" type="image/x-icon">
+        <!-- GOOGLE FONTS --> 
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        
+        <!-- BOOTSTRAP CDN--> 
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <!-- animate.css 
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" type="text/css">-->
+        <!-- aos.css 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">-->
+
+        <!-- FONT AWESOME CDN FOR ICONS 
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">-->
+        <!-- CSS RESET NORMALIZE -->
+        <link href="css/normalizer.css" rel="stylesheet" type="text/css">
+        <!-- MY OWN CSS -->
+        <link href="css/myCSS.css" rel="stylesheet" type="text/css">
+    </head>
+    
+    <body class="mainPic mainCol">
+        
+        <!-- Head Section -->
+        <section>
+            <div class="header container">
+                <div class="logoC">
+                    <a href="#home"><img src="images/QuizWorldLogo.png" alt="Quiz world logo" /></a>
+                </div>
+                <div class="welcome"><h1>Welcome to Quiz World</h1></div>
+            </div>
+        </section>
+            
+        <!-- Quiz Setting Section -->
+        <section id="setting" class="setting">
+            <div class="row">   
+                <div class="col-md">
+                    <p><label for="quizcount">Number of Questions (1-50):</label></p>
+                    <p><input type="number" id="quizcount" name="quizcount" value="10" title="enter the number of questions"></p>
+                </div>
+                <div class="col-md">
+                    <p>Select Category</p>
+                    <select id="quizcategory" name="category">
+                        <option value="">Any Category</option>
+                    </select>
+                </div>
+                <div class="col-md">
+                    <p>Select Difficulty:</p>
+                    <select id="quizdifficulty" name="category">
+                        <option value="">Any Difficulty</option>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+                <div class="col-md">
+                    <p>Select Type:</p>
+                    <select id="quiztype" name="quiztype">
+                        <option value="">Any Type</option>
+                        <option value="multiple">Multiple Choice</option>
+                        <option value="boolean">True / False</option>
+                    </select>
+                </div>
+                <div class="col-md">
+                    <p><label for="quiztime">Limited Time Per Question (1-60)[s]:</label></p>
+                    <p><input type="number" id="quiztime" name="quiztime" value="5" title="enter the time per questions"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Start Button and Time Section -->
+        <section id="buttons">
+            <div class="row buttons">
+                <div class="col-3 button">
+                    <p><span id="didit"></span></p>
+                </div>
+                <div class="col-3 button">
+                    <button id="startquiz" class="btn">Start</button>
+                </div>
+                <div class="col-3 warning">
+                    <p><span id="questiontime"></span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Question and Result Section -->
+        <section id="questions" class="questions">
+            <div class="row">
+                <div class="col-md-3">
+
+                </div>
+                <div class="col-md-6">
+                    <div id="question">
+                        <p>Category: <span id="questionCategory"></span></p>
+                        <p>Type: <span id="questionType"></span></p>
+                        <p>Difficulty: <span id="questionDifficulty"></span></p>
+                        <p>Question: <span id="questionIt"></span></p>
+                        <div id="quesrow1" class="row">
+                            <div class="col-md-6">
+                                <input type="radio" id="ques1" name="answer" value="0"><span id="ques10"></span>
+                            </div>     
+                            <div class="col-md-6">
+                                <input type="radio" id="ques2" name="answer" value="1"><span id="ques11"></span>
+                            </div>     
+                        </div>
+                        <div id="quesrow2" class="row">
+                            <div class="col-md-6">
+                                <input type="radio" id="ques3" name="answer" value="2"><span id="ques12"></span>
+                            </div>     
+                            <div class="col-md-6">
+                                <input type="radio" id="ques4" name="answer" value="3"><span id="ques13"></span>
+                            </div>     
+                        </div>
+                    </div>
+                    <div id="quizresult"></div>
+                </div>
+                <div class="col-md-3">
+
+                </div>
+            </div>
+        </section>
+        
+            
+        <script
+          src="https://code.jquery.com/jquery-3.2.1.min.js"
+          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+          crossorigin="anonymous">
+        </script> 
+        <script src="js/myScript.js"></script>
+    </body>
+</html>

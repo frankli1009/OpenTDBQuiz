@@ -1,0 +1,164 @@
+/*---------------------------------------------------------------------
+            FDG FORENSICS WEBSITE CSS STYLE FILE
+---------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------
+                        WEBSITE COLOUR SCHEME
+---------------------------------------------------------------------*/
+
+/*First colour: rgba(184, 210, 238, 1); - introduction
+Secondary colour: rgba(13, 59, 82, 1);  - header
+Third colour: rgba(51, 51, 51, 1); - footer
+Fourth colour: rgba(51, 137, 204, 1) - menu underline
+*/
+
+
+/*---------------------------------------------------------------------
+                        MOBILE DEFAULT STYLES - GLOBAL STYLES
+---------------------------------------------------------------------*/
+
+/* Prevents adjustments of font size after orientation change in IE on Windows phone and in IOS */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/* Apply a natural box model layout to all elements */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* clearfix: Force an element not to collapse */
+.clearfix: after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* All images and video set to 100% width of their parent container */
+
+img, video {
+    width: 100%;
+}
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #444;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.mainPic {
+    background-image: url(../images/maze-1542265_1280.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.logoC {
+    top: 10px;
+    left: 3px;
+    width: 130px;
+    position: fixed;
+    z-index: 100;
+}
+
+.welcome {
+    top: 30px;
+    left: 130px;
+    position: fixed;
+    z-index: 90;
+    width:90%;
+}
+
+.setting {
+    margin: 120px 0;
+}
+
+.header {
+    width: 100%;
+    background-color: rgba(0, 5, 55, 0.8);
+    clear: both;
+}
+
+h1 {
+    margin: 10px auto;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    font-size: 2em;
+}
+
+/*158, 202, 149 green
+  6, 116, 167 light blue
+*/
+
+.row {
+    margin: 20px 3px;
+}
+
+.buttons {
+    color: antiquewhite;
+    background-color: rgba(6, 116, 167, 0.8);
+    column-count: 3;
+}
+
+.col-3 {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    border: 2px solid red;
+}
+
+.btn {
+    display: block;
+    margin: 0 auto;
+    padding: 0 auto;
+    background-color: rgba(158, 202, 149, 1);
+}
+/*---------------------------------------------------------------------
+                 DESKTOP STYLES - 568 SCREEN RESOLUTION
+---------------------------------------------------------------------*/
+
+
+@media screen and (min-width: 568px) {
+    .setting .row {
+        column-count: 1;
+        height: auto;
+    }
+}
+
+/*---------------------------------------------------------------------
+                 DESKTOP STYLES - 768 SCREEN RESOLUTION
+---------------------------------------------------------------------*/
+
+
+@media screen and (min-width: 768px) {
+    .setting .row {
+        column-count: 3;
+        height: 200px;
+    }
+    .col-md {
+        height: 100px;
+    }
+}
+
+/*---------------------------------------------------------------------
+                 DESKTOP STYLES - 1024 SCREEN RESOLUTION
+---------------------------------------------------------------------*/
+
+
+@media screen and (min-width: 1024px) {
+    .setting .row {
+        column-count: 5;
+        height: 80px;
+    }
+    .col-md {
+        height: 70px;
+    }
+}
