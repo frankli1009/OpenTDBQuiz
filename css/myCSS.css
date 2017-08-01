@@ -57,7 +57,10 @@ body {
 
 .mainPic {
     background-image: url(../images/maze-1542265_1280.png);
-    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .row {
@@ -68,7 +71,7 @@ body {
     padding: 10px 3px;
     height: 88px;
     width: 100%;
-    background-color: rgba(0,53, 93, 0.8);
+    background-color: rgba(0,53, 93, 0.9);
     clear: both;
 }
 
@@ -128,7 +131,7 @@ div.welcome > h1 {
     font-size: 0.8em;
     color: rgb(141, 173, 201);
     width: 100%;
-    background-color: rgba(37, 105, 166, 0.8);
+    background-color: rgba(37, 105, 166, 0.9);
 }
 
 p.label {
@@ -156,7 +159,7 @@ p.label {
 
 .buttons {
     color: antiquewhite;
-    background-color: rgba(43, 95, 143, 0.8);
+    background-color: rgba(43, 95, 143, 0.9);
 }
 
 .btn {
@@ -187,7 +190,11 @@ p.label {
 }
 
 .questions {
-    
+    background-color: rgba(220, 233, 242, 0.9);
+}
+
+.questionTitle {
+    background-color: rgba(72, 134, 167, 0.9);
 }
 /*---------------------------------------------------------------------
                  DESKTOP STYLES - 568 SCREEN RESOLUTION
