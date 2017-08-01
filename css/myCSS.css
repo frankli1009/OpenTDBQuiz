@@ -6,10 +6,10 @@
                         WEBSITE COLOUR SCHEME
 ---------------------------------------------------------------------*/
 
-/*First colour: rgba(184, 210, 238, 1); - introduction
-Secondary colour: rgba(13, 59, 82, 1);  - header
-Third colour: rgba(51, 51, 51, 1); - footer
-Fourth colour: rgba(51, 137, 204, 1) - menu underline
+/*First colour: rgba(0,53, 93, 0.8); - header
+Secondary colour: rgba(37, 105, 166, 0.8);  - setting
+Third colour: rgba(43, 95, 143, 0.8); - buttons
+Fourth colour: rgba(219, 232, 243, 0.8) - question
 */
 
 
@@ -52,74 +52,137 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    background-color: rgba(219, 232, 243, 1);
 }
 
-.mainPic {
-    background-image: url(../images/maze-1542265_1280.png);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-.logoC {
-    top: 10px;
-    left: 3px;
-    width: 130px;
-    position: fixed;
-    z-index: 100;
-}
-
-.welcome {
-    top: 30px;
-    left: 130px;
-    position: fixed;
-    z-index: 90;
-    width:90%;
-}
-
-.setting {
-    margin: 120px 0;
+.row {
+    margin: 0;
 }
 
 .header {
+    padding: 10px 3px;
+    height: 88px;
     width: 100%;
-    background-color: rgba(0, 5, 55, 0.8);
+    background-color: rgba(0,53, 93, 0.8);
     clear: both;
 }
 
-h1 {
-    margin: 10px auto;
-    text-align: center;
-    color: rgba(255, 255, 255, 1);
-    font-size: 2em;
+.logoC img {
+    width: auto;
 }
 
-/*158, 202, 149 green
-  6, 116, 167 light blue
+div.welcome {
+    margin: 0px auto;
+    text-align: center;
+}
+
+div.welcome > h1 {
+/*    margin: 15px auto;*/
+    color: rgba(255, 255, 255, 1);
+    font-size: 1.5em;
+}
+
+#quizTitle {
+    display: none;
+}
+
+#quizTitleS {
+    display: block;
+}
+
+.settingBtn {
+    font-size: 1.5em;
+    color: brown;
+    width: auto;
+    margin-top: 10px;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/*
+.header > div {
+    border-bottom: 2px solid green;
+    border-right: 2px solid green;
+}
 */
 
-.row {
-    margin: 20px 3px;
+.bottomB {
+    border-bottom: 2px solid silver;
+}
+
+.rightB {
+    border-right: 2px solid silver;
+}
+
+.rightBC {
+    border-right: auto;
+}
+
+.setting {
+    font-size: 0.8em;
+    color: rgb(141, 173, 201);
+    width: 100%;
+    background-color: rgba(37, 105, 166, 0.8);
+}
+
+p.label {
+    padding: 10px auto;
+    font-size: 0.8em;
+    color: rgb(255, 255, 255);
+}
+
+.col-xs-6 {
+    height: 80px;
+}
+
+.setting > .row > div {
+/*    padding-left: 20px;
+    background-color: red;*/
+}
+
+#quizcategory {
+    width: 200px;
+}
+
+.modal-content {
+    background-color: rgba(37, 105, 166, 1);
 }
 
 .buttons {
     color: antiquewhite;
-    background-color: rgba(6, 116, 167, 0.8);
-    column-count: 3;
-}
-
-.col-3 {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    border: 2px solid red;
+    background-color: rgba(43, 95, 143, 0.8);
 }
 
 .btn {
     display: block;
     margin: 0 auto;
     padding: 0 auto;
-    background-color: rgba(158, 202, 149, 1);
+    /*color: rgb(198, 217, 176);*/
+    color: rgb(225, 225, 225);
+    background-color: rgba(146, 181, 64, 1);
+    width: 120px;
+}
+
+.btn:hover {
+    color: rgb(128, 128, 128);
+}
+
+.button.col-xs-4, .button.col-xs-4, .warning.col-xs-4 {
+    margin-top: 15px;
+    height: 50px;
+}
+
+.warning.col-xs-4 {
+    text-align: right;
+    color: deeppink;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 2px;
+}
+
+.questions {
+    
 }
 /*---------------------------------------------------------------------
                  DESKTOP STYLES - 568 SCREEN RESOLUTION
@@ -128,8 +191,18 @@ h1 {
 
 @media screen and (min-width: 568px) {
     .setting .row {
-        column-count: 1;
         height: auto;
+    }
+    #quizTitle {
+        display: block;
+    }
+
+    #quizTitleS {
+        display: none;
+    }
+    
+    .setting {
+        font-size: 1em;
     }
 }
 
@@ -139,12 +212,25 @@ h1 {
 
 
 @media screen and (min-width: 768px) {
-    .setting .row {
-        column-count: 3;
-        height: 200px;
-    }
+/*
     .col-md {
         height: 100px;
+    }
+*/
+
+}
+
+/*---------------------------------------------------------------------
+                 DESKTOP STYLES - 992 SCREEN RESOLUTION
+---------------------------------------------------------------------*/
+
+
+@media screen and (min-width: 992px) {
+    .bottomB {
+        border-bottom: none;
+    }
+    .rightBC {
+        border-right: 2px solid silver;
     }
 }
 
@@ -155,7 +241,6 @@ h1 {
 
 @media screen and (min-width: 1024px) {
     .setting .row {
-        column-count: 5;
         height: 80px;
     }
     .col-md {
