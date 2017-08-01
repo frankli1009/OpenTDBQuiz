@@ -55,6 +55,11 @@ body {
     background-color: rgba(219, 232, 243, 1);
 }
 
+.mainPic {
+    background-image: url(../images/maze-1542265_1280.png);
+    
+}
+
 .row {
     margin: 0;
 }
