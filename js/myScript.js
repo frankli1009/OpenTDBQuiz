@@ -113,7 +113,7 @@ $(function(){
         curQuestion.cntdwnInt = null;
         nextQuestion();
     })
-    
+        
     $("#startquiz").on("click", function() {
         if(!validCount($("#quizcount").val(), 1, 50)) {
            alert("Please enter a number between 1 and 50 for number of questions.");
@@ -131,6 +131,8 @@ $(function(){
         var quizDifficulty = $("#quizdifficulty").val();
         quiz.countDown = parseInt($("#quiztime").val());
         console.log("countdown: "+quiz.countDown);
+        
+        $("#didit").html("You did: 0 / 0");
         
         var url = "https://opentdb.com/api.php?amount=10";
         if(quizCategory) {
@@ -163,8 +165,10 @@ $(function(){
             console.log("fail to get questions");
             $("#quizresult").text("Can't load quiz question, please try it later.");
             showResult(true);
+            $("#didit").html("");
         });
     });
+
 });
 
 function showResult(showRes) {
